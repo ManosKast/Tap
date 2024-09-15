@@ -69,9 +69,8 @@ def main():
             # Move the mouse and click
             for (x, y, w, h) in rectangles:
                 x, y = get_random_coordinates(x, y, width, height)
-                gui.moveTo(x, y)
                 sleep(human_reaction_time(np.log(0.3), 0.2))
-                gui.click()
+                gui.click(x=x, y=y)
 
         sleep(0.5)
 
